@@ -1,0 +1,22 @@
+<!Doctype html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<form method="POST" >
+<input name = "task-input">
+
+<button type="submit" >add</button>
+
+
+<div>
+    <ul>
+        {%for t in task%}
+        <li>{{ t['task'] }}</li>
+        {% endfor %}
+    </ul>
+</div>
+    </form>
+</body>
+</html>
