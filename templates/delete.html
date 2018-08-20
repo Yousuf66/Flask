@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<form method="post" action="{{url_for('delete')}}">
+    <div class="form-group" >
+    <label for="t">title</label>
+    <textarea class="form-control" id="t" name="title" rows="1"></textarea>
+  </div>
+
+    <input class="btn btn-primary" type="submit" value="delete">
+</form>
+
+
+{% endblock %}

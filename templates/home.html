@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+{%for t in task%}
+<div class="jumbotron jumbotron-fluid task-list">
+  <div class="container">
+    <h1 class="display-4">{{t['title']}}</h1>
+    <p class="lead">{{t['description']}}</p>
+  </div>
+</div>
+{%endfor%}
+
+
+{% endblock %}
