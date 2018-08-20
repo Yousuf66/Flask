@@ -21,8 +21,10 @@ class searchForm(Form):
     title=StringField('title',validators=[Required()])
     submit = SubmitField('submit')
 
-
-@app.route("/", methods=['GET'])
+@app.route('/',methods=['GET'])
+def home():
+    return render_template("home.html")
+@app.route("/index", methods=['GET'])
 def index():
     data = mongo.db.todo.find({}).count()
     if (data == 0):
