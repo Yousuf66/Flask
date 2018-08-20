@@ -1,22 +1,13 @@
-<!Doctype html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-<form method="POST" >
-<input name = "task-input">
+{% extends 'layout.html' %}
 
-<button type="submit" >add</button>
+{% block body %}
+
+ <a href="{{url_for('index')}}" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Task List json</a>
+        <a href="{{url_for('add')}}" class="btn btn-primary btn-lg" role="button" aria-disabled="true">add</a>
+    <a href="{{url_for('delete')}}" class="btn btn-primary btn-lg" role="button" aria-disabled="true">delete</a>
+    <a href="{{url_for('search')}}" class="btn btn-primary btn-lg" role="button" aria-disabled="true">search</a>
+    <a href="{{url_for('update')}}" class="btn btn-primary btn-lg" role="button" aria-disabled="true">replace</a>
+     <a href="{{url_for('display')}}" class="btn btn-primary btn-lg" role="button" aria-disabled="true">task list</a>
 
 
-<div>
-    <ul>
-        {%for t in task%}
-        <li>{{ t['task'] }}</li>
-        {% endfor %}
-    </ul>
-</div>
-    </form>
-</body>
-</html>
+{% endblock %}
